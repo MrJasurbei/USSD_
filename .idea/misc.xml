@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/drawable/button_top_2.xml" value="0.1325" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/drawable/check_tariff_bg.xml" value="0.1325" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/drawable/fragment_bg.xml" value="0.144" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/drawable/grid_bg.xml" value="0.144" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.144" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/drawable/nav_menu_bg.xml" value="0.1325" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/drawable/small_button.xml" value="0.1325" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/drawable/small_button2.xml" value="0.1325" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/drawable/tariff.xml" value="0.1325" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/drawable/tariff_ic_bg.xml" value="0.1325" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/drawable/top_button_bg.xml" value="0.1325" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/activity_language.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/child_expand_title.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/fragment_data_about_tariff.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/fragment_tariff.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/fragment_tariff2.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/fragment_tariff3.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/grid_item.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/tariff_vp_item.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/title_expand_layout.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/menu/arrow_back_nav.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/menu/bottom_menu.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/menu/status_bar.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="1.0" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

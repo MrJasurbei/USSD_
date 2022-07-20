@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="?attr/actionBarSize"
+    tools:context=".TariffFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_traffics"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#01B4FF"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="internet paketlar"
+        app:titleMarginStart="30dp"
+        app:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="#01B4FF "
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/daily_button"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/top_button_bg"
+                android:text="Kunlik"
+                android:minHeight="0dp"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:backgroundTint="@null"
+                android:textAllCaps="false"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/weekly2_button"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/top_button_bg"
+                android:text="Haftalik"
+                android:minHeight="0dp"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:backgroundTint="@null"
+                android:textAllCaps="false"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/monthly_button"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_top_2"
+                android:text="Oylik"
+                android:minHeight="0dp"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="#01B4FF"
+                android:textSize="12sp"
+                app:backgroundTint="@null"
+                android:textAllCaps="false"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/weekly_button"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/top_button_bg"
+                android:text="Haftalik"
+                android:minHeight="0dp"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:backgroundTint="@null"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/check_tariff"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="26dp"
+            android:layout_gravity="center_horizontal"
+            app:backgroundTint="@null"
+            android:background="@drawable/check_tariff_bg"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="#B08E15"
+            android:text="Trafikni tekshirish"/>
+
+    </LinearLayout>
+    <ExpandableListView
+        android:id="@+id/expandable_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/tariff"
+        android:layoutDirection="rtl"
+        />
+
+</RelativeLayout>

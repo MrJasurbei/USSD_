@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DataAboutTariffFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_tariff"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#01B4FF"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/white" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:background="#01B4FF"
+        android:layout_below="@id/toolbar_tariff"/>
+
+    <LinearLayout
+        android:id="@+id/in_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_tariff"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/tariff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="93dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Tarif"
+                android:textColor="#228BD6"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tariff_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Oddiy 10"
+                android:textColor="#228BD6"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abonent to'lovi:"
+                android:textColor="#2E2E2E"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tariff_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="160dp"
+                android:text="10 000 so'm"
+                android:textColor="#2E2E2E"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:background="#2E2E2E" />
+
+        <TextView
+            android:id="@+id/full_data"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/plan_of_tariff"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/in_detail_button"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:background="@drawable/small_button"
+                android:text="Batafsil"
+                android:textColor="#333232"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/connecting_button"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="94dp"
+                android:background="@drawable/small_button2"
+                android:text="Ulanish"
+                android:textColor="@color/white"
+                app:backgroundTint="@null" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_tariff"
+        android:layout_width="310dp"
+        android:layout_height="155dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/fragment_bg">
+
+        <TextView
+            android:id="@+id/text_name_of_tariff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:text="ODDIY 10"
+            android:textColor="#FFD12D"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/traffic_types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_name_of_tariff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/min_yellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:src="@drawable/yellow_min" />
+
+            <ImageView
+                android:id="@+id/mb_yellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:src="@drawable/mb_yellow" />
+
+            <ImageView
+                android:id="@+id/sms_yellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sms_yellow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tr_mbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/traffic_types"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/minutes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="38dp"
+                android:text="10MIN"
+                android:textColor="#FFD12D"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/internetMb_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:text="10MB"
+                android:textColor="#FFD12D"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sms_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10SMS"
+                android:textColor="#FFD12D"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tariff_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tr_mbs"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="oyiga 10 000 so'm"
+            android:textColor="#68D2FF"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
