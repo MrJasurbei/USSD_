@@ -21,17 +21,7 @@ import kotlinx.android.synthetic.main.fragment_tariff.*
 class HomeFragment : Fragment(),TariffVPAdapter.onPageClickListener {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    val traffics: List<String> = listOf("50", "100", "150", "500", "1GB", "2GB", "5GB", "10GB", "15GB ")
-    val sms: List<String> = listOf("50", "100", "150", "200", "250", "300", "400", "500", "600")
-    val titles = arrayOf("USSD", "Tarif", "Xizmat", "Minut", "Internet", "SMS")
-    val icons = arrayOf(
-        R.drawable.hash,
-        R.drawable.credit_card,
-        R.drawable.sliders,
-        R.drawable.phone,
-        R.drawable.earth,
-        R.drawable.message
-    )
+
     private var tariffPagerList:MutableList<TariffList> = ArrayList()
     lateinit var adapter: GridAdapter
     private lateinit var tariffVPAdapter: TariffVPAdapter
@@ -53,21 +43,29 @@ class HomeFragment : Fragment(),TariffVPAdapter.onPageClickListener {
     ): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        adapter = GridAdapter(requireContext(), titles, icons)
+        adapter = GridAdapter(requireContext(), Helper.titles, Helper.icons)
         binding.gridContainer.adapter = adapter
         binding.gridContainer.adapter = adapter
         setHasOptionsMenu(true)
         
         binding.gridContainer.setOnItemClickListener { adapterView, view, i, l ->
-            Log.d("@@@", "${i} $l")
-            when(i){
-                4->{parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container_view, TariffFragment(traffics, "Trafik tekshirish", "Internet Paketlar")).commit()}
-                5->{
-                    Log.d("@@@", "Text  $l")
 
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container_view, TariffFragment(sms, "SMS ni tekshirish", "SMS paketlar")).commit()}
+            when(i){
+                1->{
+                    transferData(TariffFragment(Helper.tariffs, Helper.textButton[3], Helper.textToolbar[3]), 1)
+                }
+                4->{
+                    transferData(TariffFragment(Helper.traffics, Helper.textButton[0], Helper.textToolbar[0]), 0)
+                    //parentFragmentManager.beginTransaction()
+                    //.replace(R.id.fragment_container_view, TariffFragment(Helper.traffics, Helper.textButton[0], Helper.textToolbar[0])).commit()
+
+                }
+                5->{
+                    transferData(TariffFragment(Helper.traffics, Helper.textButton[1], Helper.textToolbar[1]), 0)
+//                    parentFragmentManager.beginTransaction()
+//                       .replace(R.id.fragment_container_view, TariffFragment(Helper.sms, Helper.textButton[1], Helper.textToolbar[1])).commit()
+//
+                }
             }
         }
 
@@ -97,6 +95,12 @@ class HomeFragment : Fragment(),TariffVPAdapter.onPageClickListener {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    private fun transferData(fragment: Fragment, key: Int){
+        val bundle = Bundle()
+        bundle.putInt("requestCode", key)
+        fragment.arguments = bundle
+        parentFragmentManager.beginTransaction().replace(R.id.fragment_container_view, fragment).commit()
     }
 
 }

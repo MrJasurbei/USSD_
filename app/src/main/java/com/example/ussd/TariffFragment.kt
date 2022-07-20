@@ -19,8 +19,23 @@ class TariffFragment(val list: List<String>, val textButton: String, val textToo
     ): View? {
         _binding = FragmentTariffBinding.inflate(inflater, container, false)
 
-        val expandableAdapter = ExpandableAdapter(requireContext(), list)
-         binding.expandableListView.setAdapter(expandableAdapter)
+        val requestCode = arguments?.getInt("requestCode")
+        if (requestCode==1){
+            binding.checkTraffic.visibility = View.VISIBLE
+            val expandableAdapter = ExAdapter2(requireContext(), list)
+           binding.expandableListView.setAdapter(expandableAdapter)
+
+        }else{
+            binding.topLayout.visibility = View.VISIBLE
+            val expandableAdapter = ExpandableAdapter(requireContext(), list)
+            binding.expandableListView.setAdapter(expandableAdapter)
+        }
+
+
+        binding.backArrow.setOnClickListener{
+            parentFragmentManager.beginTransaction().replace(R.id.fragment_container_view, HomeFragment()).commit()
+        }
+
         return binding.root
     }
 
@@ -29,6 +44,7 @@ class TariffFragment(val list: List<String>, val textButton: String, val textToo
 
         binding.checkTariff.text = textButton
         binding.toolbarTraffics.title = textToolbar
+        binding.checkTariff.text = textButton
     }
     override fun onDestroyView() {
         super.onDestroyView()

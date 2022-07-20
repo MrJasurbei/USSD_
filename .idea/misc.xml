@@ -24,6 +24,7 @@
         <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/fragment_tariff2.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/fragment_tariff3.xml" value="0.2" />
         <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/grid_item.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/parent_expand_list.xml" value="0.2" />
         <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/tariff_vp_item.xml" value="0.2" />
         <entry key="..\:/AndroidProjects/USSD/app/src/main/res/layout/title_expand_layout.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/USSD/app/src/main/res/menu/arrow_back_nav.xml" value="0.2" />
@@ -37,12 +38,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="1.0" />
-      </ProjectState>
-    </option>
   </component>
 </project>
