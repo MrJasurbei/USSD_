@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
- <item android:id="@+id/nav_balance" android:title="Balans" android:icon="@drawable/balans"/>
+
+ <item android:id="@+id/nav_balance"
+       android:title="Balans"
+       android:icon="@drawable/balans"/>
+    
     <item android:id="@+id/nav_operator"
         android:title="Operator"
         android:icon="@drawable/operator"
         />
     <item android:title="" android:checked="true"/>
+
     <item android:id="@+id/nav_news"
         android:title="Yangiliklar"
         android:icon="@drawable/news_bottom"/>
-    <item android:id="@+id/nav_settings" android:icon="@drawable/settings_bottom" android:title="Sozlamalar"/>
+
+    <item android:id="@+id/nav_settings"
+          android:icon="@drawable/settings_bottom"
+          android:title="Sozlamalar"/>
+
 </menu>

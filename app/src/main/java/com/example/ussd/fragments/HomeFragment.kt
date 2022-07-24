@@ -1,24 +1,19 @@
-package com.example.ussd
+package com.example.ussd.fragments
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
-import android.widget.GridView
-import androidx.fragment.app.FragmentManager
-import androidx.viewpager.widget.ViewPager
+import com.example.ussd.Helper
+import com.example.ussd.R
+import com.example.ussd.TariffList
+import com.example.ussd.adapter.GridAdapter
+import com.example.ussd.adapter.TariffVPAdapter
 import com.example.ussd.databinding.FragmentHomeBinding
-import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
-import kotlinx.android.synthetic.main.fragment_data_about_tariff.*
-import kotlinx.android.synthetic.main.fragment_tariff.*
 
 
-class HomeFragment : Fragment(),TariffVPAdapter.onPageClickListener {
+class HomeFragment : Fragment(), TariffVPAdapter.onPageClickListener {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -51,21 +46,16 @@ class HomeFragment : Fragment(),TariffVPAdapter.onPageClickListener {
         binding.gridContainer.setOnItemClickListener { adapterView, view, i, l ->
 
             when(i){
-                1->{
-                    transferData(TariffFragment(Helper.tariffs, Helper.textButton[3], Helper.textToolbar[3]), 1)
-                }
-                4->{
-                    transferData(TariffFragment(Helper.traffics, Helper.textButton[0], Helper.textToolbar[0]), 0)
-                    //parentFragmentManager.beginTransaction()
-                    //.replace(R.id.fragment_container_view, TariffFragment(Helper.traffics, Helper.textButton[0], Helper.textToolbar[0])).commit()
+                0->{transferData(TariffFragment(Helper.ussdCodesName, Helper.codes, "", Helper.textToolbar[5]),3)}
+                1->{transferData(TariffFragment(Helper.tariffs, Helper.sms, Helper.textButton[3], Helper.textToolbar[3]), 1) }
 
-                }
-                5->{
-                    transferData(TariffFragment(Helper.traffics, Helper.textButton[1], Helper.textToolbar[1]), 0)
-//                    parentFragmentManager.beginTransaction()
-//                       .replace(R.id.fragment_container_view, TariffFragment(Helper.sms, Helper.textButton[1], Helper.textToolbar[1])).commit()
-//
-                }
+                2-> {transferData(TariffFragment(Helper.services, Helper.sms, "", Helper.textToolbar[4]), 2)}
+                3-> {transferData(TariffFragment(Helper.minutes, Helper.sms, Helper.textButton[2], Helper.textToolbar[2]),0)}
+
+                4->{transferData(TariffFragment(Helper.trafficsD, Helper.traffics, Helper.textButton[0], Helper.textToolbar[0]), 0) }
+
+                5->{transferData(TariffFragment(Helper.smsD, Helper.sms, Helper.textButton[1], Helper.textToolbar[1]), 0)}
+
             }
         }
 

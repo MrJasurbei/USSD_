@@ -1,16 +1,17 @@
-package com.example.ussd
+package com.example.ussd.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebSettings
 import androidx.viewpager.widget.PagerAdapter
+import com.example.ussd.R
+import com.example.ussd.TariffList
 import kotlinx.android.synthetic.main.tariff_vp_item.view.*
 
 class TariffVPAdapter(val context: Context, val dataList: MutableList<TariffList>):PagerAdapter() {
 
-    private var listener:onPageClickListener? = null
+    private var listener: onPageClickListener? = null
 
     override fun getCount(): Int {
         return dataList.size
@@ -32,7 +33,7 @@ class TariffVPAdapter(val context: Context, val dataList: MutableList<TariffList
         container.addView(view, 0)
         return view
     }
-    fun setOnPageClickListener(listener:onPageClickListener){
+    fun setOnPageClickListener(listener: onPageClickListener){
         this.listener = listener
     }
     interface onPageClickListener{

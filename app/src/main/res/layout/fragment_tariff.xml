@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#01B4FF"
-    android:layout_marginBottom="?attr/actionBarSize"
-    tools:context=".TariffFragment">
+    tools:context=".fragments.TariffFragment">
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -141,13 +140,22 @@
             android:text="Trafikni tekshirish"/>
 
     </LinearLayout>
+
     <ExpandableListView
-        android:id="@+id/expandable_list_view"
+        android:id="@+id/expandable_list_view1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="invisible"
         android:layout_marginTop="180dp"
         android:background="@drawable/tariff"
-        android:layoutDirection="rtl"
-        />
+        android:layoutDirection="rtl" />
+    <ExpandableListView
+        android:id="@+id/expandable_list_view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/tariff"
+        android:layoutDirection="rtl" />
 
 </RelativeLayout>
